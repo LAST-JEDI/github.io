@@ -65,8 +65,10 @@
 		document.getElementById('username').innerText = list[0].replace("-", " ");
 		document.getElementById('xueyuan').innerText = list[1];
 		document.getElementById('zhuanye').innerText = list[2];
-		document.getElementById('time1').innerText = date.toLocaleDateString() + " " + list[3].split("%")[0] + ":00";
-		document.getElementById('time2').innerText = date.toLocaleDateString() + " " + list[4].split("%")[0] + ":00";
+		//document.getElementById('time1').innerText = date.toLocaleDateString() + " " + list[3].split("%")[0] + ":00";
+		//document.getElementById('time2').innerText = date.toLocaleDateString() + " " + list[4].split("%")[0] + ":00";
+		document.getElementById('time1').innerText = list[7] + " " + list[3].split("%")[0] + ":00";
+		document.getElementById('time1').innerText = list[8] + " " + list[3].split("%")[0] + ":00";
 		document.getElementById('liyou').innerText = list[5];
 		document.getElementById('quxiang').innerText = list[6];
 	</script>
