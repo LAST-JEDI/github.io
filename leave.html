@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="icon" href="favicon.ico.css">
-	<title style="text-align:left;">请假条</title>
+	<title style="text-align:left;">易知独秀</title>
 	<link rel="stylesheet" href="./static/chunk-vendors.30718328.css" />
 	<link rel="stylesheet" href="./static/first.css" />
 	<script type="text/javascript" src="./static/jquery-3.3.1.min.js"></script>
@@ -19,7 +19,7 @@
 					<div class="cube-scroll-list-wrapper" style="min-height: 0px;">
 						<div data-v-d4d5c34c="" data-v-69c87bfd="" class="affairs-detail">
 							<div data-v-d4d5c34c="" class="user-info">
-								<div data-v-d4d5c34c="" class="header bg-purple">请假条-已通过 </div>
+								<div data-v-d4d5c34c="" class="header bg-purple">请假条-待销假 </div>
 								<div data-v-d4d5c34c="" class="body">
 									<p data-v-d4d5c34c=""><span data-v-d4d5c34c="">姓名：</span><span data-v-d4d5c34c=""
 											id="username"></span></p>
@@ -31,7 +31,7 @@
 											id="time1"></span></p>
 									<p data-v-d4d5c34c=""><span data-v-d4d5c34c="">结束时间：</span><span data-v-d4d5c34c=""
 											id="time2"></span></p>
-									<p data-v-d4d5c34c=""><span data-v-d4d5c34c="">请假理由：</span><span data-v-d4d5c34c=""
+									<p data-v-d4d5c34c=""><span data-v-d4d5c34c="">请假事由：</span><span data-v-d4d5c34c=""
 											id="liyou"></span></p>
 									<p data-v-d4d5c34c=""><span data-v-d4d5c34c="">去向地址：</span><span data-v-d4d5c34c=""
 											id="quxiang"></span></p>
@@ -40,23 +40,33 @@
 							<div data-v-d4d5c34c="" class="operate">
 								<button data-v-d4d5c34c="" type="button" icon="" _type="button"
 									class="dx-btn dx-btn_primary" onclick="up()">
-									<!---->返校销假
+									<!---->销假
 									<form form action="./in_school.html" name="infor" method="get" id="infor">
 										<input type="text" name="infro" id="infro" hidden="hidden" />
 										<input type="submit" id="sub" hidden="hidden" />
 									</form>
 								</button>
 							</div>
+
+							<div data-v-d4d5c34c="" class="operate">
+								<a href="./home.html">
+								<button data-v-d4d5c34c="" type="button" icon="" _type="button"
+									class="dx-btn dx-btn_primary" style="background-color: #8E9397;">
+									<!---->返回
+								</button>
+								</a>
+							</div>
+
 							<div data-v-d4d5c34c="" class="spinner">
 								<div data-v-d4d5c34c="" class="bg-purple"></div>
 								<div data-v-d4d5c34c="" class="bg-purple"></div>
 								<div data-v-d4d5c34c="" class="bg-purple"></div>
 								<div data-v-d4d5c34c="" class="bg-purple"></div>
 								<div data-v-d4d5c34c="" class="bg-purple"></div>
+								<!-- <div data-v-d4d5c34c="" class="bg-purple"></div>
 								<div data-v-d4d5c34c="" class="bg-purple"></div>
 								<div data-v-d4d5c34c="" class="bg-purple"></div>
-								<div data-v-d4d5c34c="" class="bg-purple"></div>
-								<div data-v-d4d5c34c="" class="bg-purple"></div>
+								<div data-v-d4d5c34c="" class="bg-purple"></div> -->
 							</div>
 							<div data-v-d4d5c34c="" class="flow"></div>
 						</div>
@@ -72,13 +82,20 @@
 		<div class="cube-popup-container cube-popup-center">
 			<div class="cube-popup-content">
 				<!---->
-				<div class="cube-loading"><span class="cube-loading-spinners"><i class="cube-loading-spinner"></i><i
+				<div class="cube-loading">
+					<span class="cube-loading-spinners">
+						<i class="cube-loading-spinner"></i>
+						<i class="cube-loading-spinner"></i>
+						<i class="cube-loading-spinner"></i>
+						<i class="cube-loading-spinner"></i>
+						<i class="cube-loading-spinner"></i>
+					
+					<!-- <i class="cube-loading-spinner"></i><i class="cube-loading-spinner"></i><i
 							class="cube-loading-spinner"></i><i class="cube-loading-spinner"></i><i
 							class="cube-loading-spinner"></i><i class="cube-loading-spinner"></i><i
-							class="cube-loading-spinner"></i><i class="cube-loading-spinner"></i><i
-							class="cube-loading-spinner"></i><i class="cube-loading-spinner"></i><i
-							class="cube-loading-spinner"></i><i class="cube-loading-spinner"></i><i
-							class="cube-loading-spinner"></i></span></div>
+							class="cube-loading-spinner"></i> -->
+						
+					</span></div>
 				<div class="cube-toast-tip" style="display: none;"></div>
 			</div>
 		</div>
@@ -97,8 +114,8 @@
 	document.getElementById('username').innerText = list[0].replace("-", " ");
 	document.getElementById('xueyuan').innerText = list[1];
 	document.getElementById('zhuanye').innerText = list[2];
-	document.getElementById('time1').innerText = list[7].replace(/%2F/g, "/") + " " + list[3].split("%")[0] + ":00";
-	document.getElementById('time2').innerText = list[8].replace(/%2F/g, "/") + " " + list[4].split("%")[0] + ":00";
+	document.getElementById('time1').innerText = list[7].replace(/%2F/g, "-") + " " + list[3].split("%")[0] + ":00";
+	document.getElementById('time2').innerText = list[8].replace(/%2F/g, "-") + " " + list[4].split("%")[0] + ":00";
 	document.getElementById('liyou').innerText = list[5];
 	document.getElementById('quxiang').innerText = list[6];
 
